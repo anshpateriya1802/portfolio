@@ -87,18 +87,18 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold mb-4">My Story</h2>
           <div className="space-y-4 text-muted-foreground">
             <p>
-              Hi, I'm Ansh Pateriya. I've been passionate about technology since I was young, starting with 
+              Hi, I&apos;m Ansh Pateriya. I&apos;ve been passionate about technology since I was young, starting with 
               simple HTML websites and growing into a full-stack developer with 
               expertise in modern frameworks and tools.
             </p>
             <p>
               With over 5 years of professional experience, I specialize in building 
               responsive, accessible web applications using React, Node.js, and other 
-              modern technologies. I'm passionate about clean code, user experience, 
+              modern technologies. I&apos;m passionate about clean code, user experience, 
               and solving complex problems.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new technologies, 
+              When I&apos;m not coding, you can find me exploring new technologies, 
               contributing to open-source projects, or enjoying outdoor activities in Bengaluru.
             </p>
           </div>

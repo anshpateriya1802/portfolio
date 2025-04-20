@@ -2,12 +2,10 @@
 
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from "next/link"
-import { Globe, Github, Search } from "lucide-react"
-import { useState } from "react"
+import { Globe, Github } from "lucide-react"
 
 // Define the Project interface
 interface Project {
