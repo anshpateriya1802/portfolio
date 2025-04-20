@@ -5,13 +5,14 @@ import { Card } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Icon } from '@iconify/react'
 
+// Define the Skill type
+interface Skill {
+  name: string;
+  icon: string;
+  color: string;
+}
+
 export default function SkillsPage() {
-  const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 }
-  }
-  
   const skills = {
     frontend: [
       { name: "React", icon: "logos:react", color: "bg-blue-500" },
@@ -129,7 +130,7 @@ export default function SkillsPage() {
   )
 }
 
-function SkillsGrid({ skills }: { skills: any[] }) {
+function SkillsGrid({ skills }: { skills: Skill[] }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {skills.map((skill, index) => (
@@ -139,7 +140,7 @@ function SkillsGrid({ skills }: { skills: any[] }) {
   )
 }
 
-function SkillCard({ skill, index }: { skill: any, index: number }) {
+function SkillCard({ skill, index }: { skill: Skill, index: number }) {
   const iconColor = getIconColor(skill.color);
   const isGithub = skill.icon === "mdi:github";
   const isExpress = skill.icon === "devicon:express";

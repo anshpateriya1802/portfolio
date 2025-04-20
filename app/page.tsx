@@ -26,7 +26,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <span className="bg-gradient-to-r from-primary via-purple-500 to-blue-500 bg-clip-text text-transparent">
-                Hi, I'm Ansh Pateriya
+                Hi, I&apos;m Ansh Pateriya
               </span>
             </motion.h1>
             <motion.p 

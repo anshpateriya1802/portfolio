@@ -2,10 +2,23 @@
 
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from "next/link"
-import { Github, Globe } from "lucide-react"
+import { Globe, Github, Search } from "lucide-react"
+import { useState } from "react"
+
+// Define the Project interface
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  technologies: string[];
+  githubUrl: string;
+  liveUrl: string;
+}
 
 export default function ProjectsPage() {
   const projects = [
@@ -115,7 +128,7 @@ export default function ProjectsPage() {
   )
 }
 
-function ProjectGrid({ projects }: { projects: any[] }) {
+function ProjectGrid({ projects }: { projects: Project[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {projects.map((project, index) => (
@@ -125,7 +138,7 @@ function ProjectGrid({ projects }: { projects: any[] }) {
   )
 }
 
-function ProjectCard({ project, index }: { project: any, index: number }) {
+function ProjectCard({ project, index }: { project: Project, index: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

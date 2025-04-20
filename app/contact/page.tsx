@@ -128,7 +128,7 @@ export default function ContactPage() {
               
               <div className="mt-auto pt-8">
                 <p className="text-muted-foreground text-sm">
-                  I'll respond to your message as soon as possible. Thanks for reaching out!
+                  I&apos;ll respond to your message as soon as possible. Thanks for reaching out!
                 </p>
               </div>
             </div>
@@ -156,7 +156,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
                 <p className="text-muted-foreground mb-6">
-                  Thank you for your message. I'll get back to you as soon as possible.
+                  Thank you for your message. I&apos;ll get back to you as soon as possible.
                 </p>
                 <Button onClick={() => setIsSubmitted(false)}>
                   Send Another Message
