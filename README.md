@@ -1,139 +1,46 @@
-# Modern Portfolio Website
+# Portfolio Website
 
-A sleek and modern portfolio website built with Next.js, React, Tailwind CSS, Shadcn UI components, and Framer Motion animations.
+This is a personal portfolio website built with React, TypeScript, and Tailwind CSS.
 
-![Portfolio Preview](public/preview.png)
+## Contact Form Setup
 
-## Features
+The contact form uses EmailJS to send emails. You need to set up an EmailJS account and configure it to make the form work:
 
-- 🎨 Modern and clean design with smooth animations
-- 🌓 Dark and light mode support
-- 📱 Fully responsive across all devices
-- ⚡ Fast and optimized performance
-- 🧩 Modular and reusable components
-- 🔄 Animated page transitions and UI elements
-- 📝 Contact form with validation
-- 🖼️ Project showcase with filtering
-- 📊 Skills visualization
-- 🛠️ Built with modern technologies
-
-## Tech Stack
-
-- **Frontend:**
-  - Next.js 14 (App Router)
-  - React 19
-  - TypeScript
-  - Tailwind CSS
-  - Framer Motion (animations)
-  - Shadcn UI (component library)
-  - React Hook Form (form handling)
-  - Zod (validation)
-  - Lucide React (icons)
-
-- **Backend:**
-  - Node.js
-  - Express
-  - Nodemailer (contact form)
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18.17 or later
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   cd portfolio
+1. Sign up for a free account at [EmailJS](https://www.emailjs.com/)
+2. Create a new Email Service (e.g., connect your Gmail account)
+3. Create a new Email Template with the following variables:
+   - `name` - Sender's name
+   - `email` - Sender's email
+   - `subject` - Email subject
+   - `message` - Email content
+4. Get your API keys from the EmailJS dashboard
+5. Update the following constants in `src/components/sections/ContactSection.tsx`:
+   ```typescript
+   const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+   const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+   const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
    ```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+## Development
 
-3. Configure environment variables:
-   ```bash
-   cp .env.example .env.local
-   # Edit .env.local with your details
-   ```
+1. Install dependencies:
 
-4. Run the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
+```bash
+npm install
+```
 
-5. Open [http://localhost:3000](http://localhost:3000) to see your portfolio website.
+2. Start the development server:
 
-### Contact Form Server
+```bash
+npm run dev
+```
 
-To enable the contact form functionality:
+## Building for Production
 
-1. Copy the `.env.example` file to `.env`:
-   ```bash
-   cp .env.example .env
-   ```
-
-2. Edit the `.env` file with your email credentials.
-
-3. Start the Node.js server:
-   ```bash
-   node server.js
-   ```
-
-## Customization
-
-### Personal Information
-
-Update your personal information in the respective page files:
-
-- `app/page.tsx` - Home page
-- `app/about/page.tsx` - About page
-- `app/projects/page.tsx` - Projects page
-- `app/skills/page.tsx` - Skills page
-- `app/contact/page.tsx` - Contact page
-
-### Theme Colors
-
-Modify the color scheme in `app/globals.css` to match your personal brand.
-
-### Projects
-
-Update the projects array in `app/projects/page.tsx` with your own projects.
-
-### Skills
-
-Update the skills in `app/skills/page.tsx` with your own skill levels.
+```bash
+npm run build
+```
 
 ## Deployment
 
-This portfolio can be easily deployed to platforms like Vercel, Netlify, or any other hosting service that supports Next.js applications.
-
-### Deploying to Vercel
-
-1. Push your code to a GitHub repository.
-2. Import your repository to Vercel.
-3. Configure environment variables in Vercel dashboard.
-4. Deploy!
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- [Next.js](https://nextjs.org/)
-- [Shadcn UI](https://ui.shadcn.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-
----
-
-Feel free to customize this portfolio to showcase your own work and personal brand!
+The built application is in the `dist` folder and can be deployed to any static hosting service like Netlify, Vercel, or GitHub Pages. 
